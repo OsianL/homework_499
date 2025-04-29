@@ -1,0 +1,5 @@
+#inputs
+bool send
+---
+#outputs
+bool acknowledge

@@ -1,0 +1,5 @@
+# Ignore zipped submissions in the archive folder
+archive/
+
+#Ignore any zip files incase I forget to move them
+*.zip
