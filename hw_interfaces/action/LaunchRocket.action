@@ -1,0 +1,8 @@
+#goal
+int32 countdown
+---
+#result
+string launch
+---
+#feedback
+int32 t_remaining

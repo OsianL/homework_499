@@ -30,6 +30,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TestPacket.msg"
   "srv/SendData.srv"
   "srv/EnableLogging.srv"
+  "action/LaunchRocket.action"
   DEPENDENCIES builtin_interfaces
 )
 ament_package()
