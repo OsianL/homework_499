@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	<node pkg="hw3" exec="data_sender" name="data_sender_python" namespace="python"/>
+	<node pkg="hw3" exec="data_receiver" name="data_receiver_python" namespace="python"/>
+	
+	<node pkg="hw6" exec="data_sender" name="data_sender_cpp" namespace="cpp"/>
+	<node pkg="hw6" exec="data_receiver" name="data_receiver_cpp" namespace="cpp"/>
+
+	<executable cmd="ros2 service call /python/send_data hw_interfaces/srv/SendData '{send: True}'"/>
+	<executable cmd="ros2 service call /cpp/send_data hw_interfaces/srv/SendData '{send: True}'"/>
+
+	<node name="plotjuggler"
+		  pkg="plotjuggler"
+		  exec="plotjuggler"
+		  args="--layout $(find-pkg-share hw6)/config/pj_layout.xml"
+	/>
+
+</launch>

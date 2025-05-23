@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	<node pkg="hw6" exec="oscope" name="oscope"/>
+	<node pkg="hw6" exec="limiter" name="limiter"/>
+</launch>
